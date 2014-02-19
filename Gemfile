@@ -9,6 +9,14 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'faker'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :test do
+  gem 'capybara'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
