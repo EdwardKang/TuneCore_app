@@ -17,13 +17,16 @@ class SongsController < ApplicationController
       else
         render partial: "layouts/song_list", locals: { songs: @songs }
       end
+      
+    else
+      render :selected
     end
   end
   
   
   def is_match?(song, search_string)
     search_string.split(" ").each do |search_word|
-      search_word = 
+      search_word.capitalize!
       
       match = song.title.split(" ").include?(search_word) || song.artist.split(" ").include?(search_word) || song.album.split(" ").include?(search_word)
       
