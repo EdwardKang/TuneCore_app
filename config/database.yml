@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tunecore
+  pool: 5
+  username: eyk23
+  password:
