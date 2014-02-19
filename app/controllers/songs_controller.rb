@@ -3,6 +3,6 @@ class SongsController < ApplicationController
   end
   
   def index
-    @songs = Song.all.order('artist').order('album')
+    @songs = Song.order('artist').order('album').all
   end
 end

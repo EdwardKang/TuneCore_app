@@ -8,6 +8,12 @@ titles = faker_data(500)
 albums = faker_data(100)
 artists = faker_data(10)
 
-titles.each do |title|
-  Song.create(title: title, artist: artists.sample, album: albums.sample)
+artists.each do |artist|
+  10.times do
+    album = albums.pop
+    
+    5.times do
+      Song.create(title: titles.pop, artist: artist, album: album)
+    end
+  end
 end
