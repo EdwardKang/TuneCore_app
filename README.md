@@ -5,6 +5,7 @@
 - My search will only return songs, whose title, artist or album, has words that match the search term's full words exactly
 - I used a seed file to make fake data using faker (all data are in the form of Faker names)
 - I used ajax requests for the searches so there is no page refresh
+- You can press enter on the search without any inputs to see all songs in the database ( i kept this for convenience and am aware of the undesired nature of this in a real app)
 
 
 
