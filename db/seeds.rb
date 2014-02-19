@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+def faker_data(number_of)
+  [].tap do |data|
+    number_of.times { |i| data << Faker::Name.name }
+  end
+end
+
+titles = faker_data(500)
+albums = faker_data(100)
+artists = faker_data(10)
+
+titles.each do |title|
+  Song.create(title: title, artist: artists.sample, album: albums.sample)
+end

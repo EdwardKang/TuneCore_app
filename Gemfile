@@ -7,6 +7,7 @@ gem 'rails', '3.2.15'
 
 gem 'pg'
 gem 'jquery-rails'
+gem 'faker'
 
 
 # Gems used only for assets and not required
